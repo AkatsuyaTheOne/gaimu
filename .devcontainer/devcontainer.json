@@ -21,5 +21,18 @@
             "terminal.integrated.defaultProfile.linux": "bash"
         }
     },
-    "forwardPorts": [6005]
+    "forwardPorts": [6005],
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git-lfs:1": "latest",
+        "ghcr.io/devcontainers/features/github-cli:1": "latest"
+    },
+    "remoteEnv": {
+        "GIT_EDITOR": "code --wait"
+    },
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+    ]
 }
