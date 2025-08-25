@@ -10,9 +10,16 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
-                "ms-python.vscode-pylance"
+                "ms-python.vscode-pylance",
+                "geequlim.godot-tools",
+                "neikeq.godot-csharp-vscode"
             ],
+            "settings": {
+                "godot_tools.editor_path": "/usr/local/bin/godot",
+                "godot_tools.gdscript_lsp_server_port": 6005
+            },
             "terminal.integrated.defaultProfile.linux": "bash"
         }
-    }
+    },
+    "forwardPorts": [6005]
 }
