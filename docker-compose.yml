@@ -5,6 +5,6 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - /home/akatsuya/workspace/gaimu:/workspace
-      - /home/akatsuya/.bash_history:/home/vscode/.bash_history
+      - /home/${USER}/workspace/gaimu:/workspace
+      - /home/${USER}/.bash_history:/home/vscode/.bash_history
     command: sleep infinity
