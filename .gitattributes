@@ -1,0 +1,23 @@
+# Imágenes
+*.png filter=lfs diff=lfs merge=lfs
+*.jpg filter=lfs diff=lfs merge=lfs
+*.webp filter=lfs diff=lfs merge=lfs
+
+# Audio
+*.wav filter=lfs diff=lfs merge=lfs
+*.ogg filter=lfs diff=lfs merge=lfs
+*.mp3 filter=lfs diff=lfs merge=lfs
+
+# Modelos 3D
+*.glb filter=lfs diff=lfs merge=lfs
+*.fbx filter=lfs diff=lfs merge=lfs
+*.dae filter=lfs diff=lfs merge=lfs
+*.blend filter=lfs diff=lfs merge=lfs
+
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs
+*.webm filter=lfs diff=lfs merge=lfs
+
+# Fuentes
+*.ttf filter=lfs diff=lfs merge=lfs
+*.otf filter=lfs diff=lfs merge=lfs
