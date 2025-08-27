@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1756331964
+enemy.gd::GDScript::6618275422613114628::1756331632::0::1::::<>Area2D<><>0<>0<><>::
+enemy.tscn::PackedScene::-1::1756331691::0::1::::<><><>0<>0<><>::res://enemy.gd<>res://enemy_sprite.png
+enemy_sprite.png::CompressedTexture2D::2111457508866574345::1756331808::1756331968::1::::<><><>0<>0<>9a74aa9ec19e2c4aac0ec124a9f85149<>res://.godot/imported/enemy_sprite.png-bc83d8704758968b0e605bbf8a88996b.ctex::
+export_presets.cfg::TextFile::-1::1756331825::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D::930830920003140533::1756331818::1756331968::1::::<><><>0<>0<>0c35bd5df110ea98f3460d8cbd0d5ce1<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+icon_generator.gd::GDScript::415399484014984858::1756331665::0::1::::<>Node2D<><>0<>0<><>::
+main.gd::GDScript::8420459875790187315::1756331639::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::-1::1756331660::0::1::::<><><>0<>0<><>::res://main.gd<>res://player.tscn
+player.gd::GDScript::1003677027798641263::1756331627::0::1::::<>Area2D<><>0<>0<><>::
+player.tscn::PackedScene::-1::1756331687::0::1::::<><><>0<>0<><>::res://player.gd<>res://player_sprite.png
+player_sprite.png::CompressedTexture2D::8558478338086677399::1756331808::1756331968::1::::<><><>0<>0<>102be91fb16550dc91204b17531c0bac<>res://.godot/imported/player_sprite.png-4f563a43cce45546f6579f77d2c39653.ctex::
+README.md::TextFile::-1::1756331833::0::1::::<><><>0<>0<><>::
+restart_button.gd::GDScript::1929135406380185620::1756331643::0::1::::<>Button<><>0<>0<><>::
+sprite_generator.gd::GDScript::3270203762183382690::1756331679::0::1::::<>Node2D<><>0<>0<><>::
+sprite_generator.tscn::PackedScene::-1::1756331684::0::1::::<><><>0<>0<><>::res://sprite_generator.gd
