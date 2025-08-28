@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://beklhmdsyhp45"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_ggrwh"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_8hss5"]
+[ext_resource type="Script" path="res://scripts/restart_button.gd" id="3_tl7jf"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_ggrwh")
+
+[node name="Player" parent="." instance=ExtResource("2_8hss5")]
+position = Vector2(640, 360)
+
+[node name="ScoreLabel" type="Label" parent="."]
+text = "Score: 0"
+
+[node name="GameOverLabel" type="Label" parent="."]
+visible = false
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+visible = false
+text = "Restart Game"
+script = ExtResource("3_tl7jf")
+
+[node name="EnemyTimer" type="Timer" parent="."]
+wait_time = 2.0

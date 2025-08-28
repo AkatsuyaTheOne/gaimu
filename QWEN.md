@@ -1,0 +1,1 @@
+By launching smoke tests remember to check for errors even if the test says that all passed.

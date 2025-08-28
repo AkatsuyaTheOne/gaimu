@@ -3,9 +3,9 @@ extends Node2D
 # Game variables
 var score: float = 0
 var game_over: bool = false
-var enemy_scene = preload("res://enemy.tscn")
+var enemy_scene = preload("res://scenes/enemy.tscn")
 
-@onready var score_label = $Scor   eLabel
+@onready var score_label = $ScoreLabel
 @onready var game_over_label = $GameOverLabel
 @onready var restart_button = $RestartButton
 @onready var enemy_timer = $EnemyTimer
@@ -60,4 +60,4 @@ func _on_Player_area_entered(area):
 
 func _on_RestartButton_pressed():
 	# Restart the game using the game manager
-	GameManager.restart_game()
+	get_node("/root/GameManager").restart_game()
