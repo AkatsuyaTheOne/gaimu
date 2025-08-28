@@ -11,10 +11,9 @@ script = ExtResource("1_q0uma")
 speed = 200.0
 collision_layer = 1
 collision_mask = 3
-"#Changedtodetectbothlayer1(self)andlayer2(enemies)[nodename" = "Sprite2D"
-type = "Sprite2D"
-parent = "."
-"]texture" = ExtResource("2_7p78r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7p78r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_sah23")

@@ -98,6 +98,12 @@ enemy_timer.connect("timeout", _on_EnemyTimer_timeout)
 - Added proper signal connections in main script
 - Ensured both player and enemies are added to appropriate groups
 
+### Player Visibility Issue
+**Problem**: Player became invisible after scene structure changes.
+**Fix**: Corrected corrupted player scene file syntax:
+- Fixed malformed scene file structure
+- Restored proper node hierarchy with Sprite2D and CollisionShape2D children
+
 ## Best Practices
 
 1. Always run tests before committing changes
@@ -108,3 +114,4 @@ enemy_timer.connect("timeout", _on_EnemyTimer_timeout)
 6. Test game functionality after making changes to scene structure
 7. Ensure proper signal connections for interactive elements
 8. Verify collision layer and mask configurations for physics interactions
+9. Check scene file syntax when making manual edits
