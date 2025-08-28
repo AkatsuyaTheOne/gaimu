@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdkhambfg2ef8"]
-
-[sub_resource type="Resource" id="Resource_smhjv"]
-metadata/__load_path__ = "res://sprite_generator.gd"
-
-[node name="SpriteGenerator" type="Node2D"]
-script = SubResource("Resource_smhjv")

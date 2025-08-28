@@ -19,50 +19,38 @@ game/
 │   ├── default_bus_layout.tres    # Default input bus layout
 │   ├── default_env.tres          # Default environment settings
 │   └── export_presets.cfg        # Export presets for building the game
+├── core/                  # Core game systems and main scene
+│   ├── base_module.gd           # Base module class
+│   ├── enemy_spawner_module.gd  # Enemy spawner module
+│   ├── game_manager.gd          # Game manager autoload
+│   ├── game_manager_module.gd   # Game manager module
+│   ├── main.gd                  # Main scene script
+│   └── main.tscn                # Main scene file
 ├── docs/                  # Documentation files
 │   ├── MODULAR_ARCHITECTURE.md   # Modular architecture documentation
 │   └── README.md                 # Main project documentation
-├── modules/               # Game modules (modular functionality)
-│   ├── core/              # Base classes and core functionality
-│   │   └── base_module.gd        # Base module class
-│   ├── player/            # Player-related modules
-│   │   └── player_module.gd      # Player module
-│   ├── enemy/             # Enemy-related modules
-│   │   └── enemy_module.gd       # Enemy module
-│   ├── ui/                # UI-related modules
-│   │   └── ui_manager_module.gd  # UI manager module
-│   └── managers/          # Game managers and systems
-│       ├── enemy_spawner_module.gd  # Enemy spawner module
-│       └── game_manager_module.gd   # Game manager module
-├── scenes/                # Game scenes
-│   ├── enemy.tscn         # Enemy scene
-│   ├── main.tscn          # Main game scene
-│   ├── player.tscn        # Player scene
-│   ├── smoke_test.tscn    # Smoke test scene
-│   └── sprite_generator.tscn # Sprite generator scene
-├── scripts/               # Utility scripts and scene behaviors
-│   ├── enemy.gd           # Enemy behavior script
-│   ├── enemy_modular.gd   # Modular enemy behavior script
-│   ├── game_manager.gd    # Game manager script
-│   ├── icon_generator.gd  # Icon generator script
-│   ├── main.gd            # Main scene script
-│   ├── main_modular.gd    # Modular main scene script
-│   ├── player.gd          # Player behavior script
-│   ├── player_modular.gd  # Modular player behavior script
-│   ├── restart_button.gd  # Restart button script
-│   ├── smoke_test.gd      # Smoke test script
-│   ├── smoke_test_cli.gd  # CLI smoke test script
-│   └── sprite_generator.gd # Sprite generator script
+├── enemy/                 # Enemy system
+│   ├── enemy.gd             # Enemy behavior script
+│   ├── enemy_module.gd      # Enemy module
+│   └── enemy.tscn           # Enemy scene file
+├── player/                # Player system
+│   ├── player.gd            # Player behavior script
+│   ├── player_module.gd     # Player module
+│   └── player.tscn          # Player scene file
+├── ui/                    # UI system
+│   ├── restart_button.gd       # Restart button script
+│   └── ui_manager_module.gd    # UI manager module
 └── .godot/                # Godot engine files (generated)
 ├── project.godot          # Godot project configuration
 ```
 
-This structure provides a clean separation of concerns:
+This structure provides a clean separation of concerns organized by domain/subject:
 - Assets are organized by type
 - Configuration files are grouped together
+- Core game systems are in the core directory
+- Enemy-related functionality is in the enemy directory
+- Player-related functionality is in the player directory
+- UI-related functionality is in the ui directory
 - Documentation is in its own directory
-- Modules are organized by functionality
-- Scenes are grouped together
-- Scripts are organized together
 
-This makes the project much easier to navigate and maintain.
+This makes the project much easier to navigate and maintain, as related functionality is grouped together.

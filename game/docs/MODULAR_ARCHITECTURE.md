@@ -10,15 +10,25 @@ game/
 │   ├── icons/             # Game icons
 │   └── sprites/           # Sprite images and their import settings
 ├── config/                # Configuration files
+├── core/                  # Core game systems and main scene
+│   ├── base_module.gd           # Base module class
+│   ├── enemy_spawner_module.gd  # Enemy spawner module
+│   ├── game_manager.gd          # Game manager autoload
+│   ├── game_manager_module.gd   # Game manager module
+│   ├── main.gd                  # Main scene script
+│   └── main.tscn                # Main scene file
 ├── docs/                  # Documentation files
-├── modules/               # Game modules (modular functionality)
-│   ├── core/              # Base classes and core functionality
-│   ├── player/            # Player-related modules
-│   ├── enemy/             # Enemy-related modules
-│   ├── ui/                # UI-related modules
-│   └── managers/          # Game managers and systems
-├── scenes/                # Game scenes
-├── scripts/               # Utility scripts and scene behaviors
+├── enemy/                 # Enemy system
+│   ├── enemy.gd             # Enemy behavior script
+│   ├── enemy_module.gd      # Enemy module
+│   └── enemy.tscn           # Enemy scene file
+├── player/                # Player system
+│   ├── player.gd            # Player behavior script
+│   ├── player_module.gd     # Player module
+│   └── player.tscn          # Player scene file
+├── ui/                    # UI system
+│   ├── restart_button.gd       # Restart button script
+│   └── ui_manager_module.gd    # UI manager module
 └── .godot/                # Godot engine files (generated)
 ```
 
@@ -44,27 +54,27 @@ func update(delta: float) -> void:
 
 To add a new module:
 
-1. Create a new script in the appropriate directory under `modules/`
-2. Inherit from `BaseModule`
+1. Create a new script in the appropriate directory
+2. Inherit from `../core/base_module.gd` (or `base_module.gd` if in core directory)
 3. Implement the required methods
 4. Add your custom functionality
 
 Example:
 ```gdscript
-# modules/powerups/powerup_module.gd
-class_name PowerupModule
-extends BaseModule
+# enemy/special_enemy_module.gd
+class_name SpecialEnemyModule
+extends "../core/base_module.gd"
 
 func initialize() -> void:
     super.initialize()  # Call parent method
-    # Insert here your powerup initialization code
+    # Insert here your special enemy initialization code
 
 func update(delta: float) -> void:
     super.update(delta)  # Call parent method
-    # Insert here your powerup update code
+    # Insert here your special enemy update code
 
-# Insert here your new powerup methods
-# func activate_powerup() -> void:
+# Insert here your new special enemy methods
+# func activate_special_ability() -> void:
 #     pass
 ```
 
@@ -85,7 +95,7 @@ To add new features:
 To verify that all modules can be loaded correctly:
 
 ```
-godot --headless -s scripts/smoke_test_cli.gd
+godot --headless -s core/smoke_test_cli.gd
 ```
 
 This will load all module scripts and verify they can be instantiated without errors.
@@ -93,20 +103,18 @@ This will load all module scripts and verify they can be instantiated without er
 ## Module Descriptions
 
 ### Core Module
-- `BaseModule`: The base class for all modules, providing a consistent interface
+- `base_module.gd`: The base class for all modules, providing a consistent interface
+- `game_manager_module.gd`: Handles game state and logic
+- `enemy_spawner_module.gd`: Handles enemy spawning logic
 
 ### Player Module
-- `PlayerModule`: Handles player movement and behavior
+- `player_module.gd`: Handles player movement and behavior
 
 ### Enemy Module
-- `EnemyModule`: Handles enemy AI and behavior
+- `enemy_module.gd`: Handles enemy AI and behavior
 
 ### UI Module
-- `UIManagerModule`: Handles UI updates and interactions
-
-### Managers
-- `GameManagerModule`: Handles game state and logic
-- `EnemySpawnerModule`: Handles enemy spawning logic
+- `ui_manager_module.gd`: Handles UI updates and interactions
 
 ## Adding New Sprites
 

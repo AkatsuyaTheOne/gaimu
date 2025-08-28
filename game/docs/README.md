@@ -31,7 +31,7 @@ This is a basic 2D game created in Godot Engine that demonstrates:
 
 ## Project Structure
 
-The project has been organized into a clean modular directory structure:
+The project has been organized into a clean domain-driven directory structure:
 
 ```
 game/
@@ -39,17 +39,15 @@ game/
 │   ├── icons/             # Game icons
 │   └── sprites/           # Sprite images and their import settings
 ├── config/                # Configuration files
+├── core/                  # Core game systems and main scene
 ├── docs/                  # Documentation files
-├── modules/               # Game modules (modular functionality)
-│   ├── core/              # Base classes and core functionality
-│   ├── player/            # Player-related modules
-│   ├── enemy/             # Enemy-related modules
-│   ├── ui/                # UI-related modules
-│   └── managers/          # Game managers and systems
-├── scenes/                # Game scenes
-├── scripts/               # Utility scripts and scene behaviors
+├── enemy/                 # Enemy system
+├── player/                # Player system
+├── ui/                    # UI system
 └── .godot/                # Godot engine files (generated)
 ```
+
+This organization groups related functionality together by domain/subject rather than by file type, making it easier to navigate and maintain.
 
 For more details about the directory structure, see [GAME_STRUCTURE.md](GAME_STRUCTURE.md).
 
@@ -61,8 +59,8 @@ The game uses a modular architecture that makes it easy to expand with new featu
 
 The project includes automated tests to verify the organization and modular architecture:
 
-- `scripts/organization_test.gd`: Verifies file paths are correct
-- `scripts/smoke_test_cli.gd`: Tests that modules can be loaded
+- `core/organization_test.gd`: Verifies file paths are correct
+- `core/smoke_test_cli.gd`: Tests that modules can be loaded
 
 For more information about testing, see [TESTING.md](TESTING.md).
 

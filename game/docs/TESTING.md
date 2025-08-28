@@ -2,10 +2,10 @@
 
 ## Organization Tests
 
-The project structure has been organized into a clean modular directory structure. You can verify the organization is correct by running:
+The project structure has been organized into a clean domain-driven directory structure. You can verify the organization is correct by running:
 
 ```
-godot --headless -s scripts/organization_test.gd
+godot --headless -s core/organization_test.gd
 ```
 
 This test verifies that all scene and script files can be found at their expected paths.
@@ -15,7 +15,7 @@ This test verifies that all scene and script files can be found at their expecte
 You can also test that the modular architecture is working correctly by running:
 
 ```
-godot --headless -s scripts/smoke_test_cli.gd
+godot --headless -s core/smoke_test_cli.gd
 ```
 
 This test verifies that all module scripts can be loaded.

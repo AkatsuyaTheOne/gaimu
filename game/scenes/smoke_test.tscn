@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8tlu5vgcyq2r"]
-
-[sub_resource type="Resource" id="Resource_hh2f3"]
-metadata/__load_path__ = "res://smoke_test.gd"
-
-[node name="SmokeTest" type="Node"]
-script = SubResource("Resource_hh2f3")
