@@ -39,4 +39,4 @@ This is a basic 2D game created in Godot Engine that demonstrates:
 
 ## Requirements
 
-- Godot Engine 3.x or 4.x
+- Godot Engine 4.x
