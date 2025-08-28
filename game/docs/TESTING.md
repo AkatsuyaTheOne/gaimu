@@ -9,6 +9,7 @@ tests/
 ├── organization_test.gd      # Verifies file paths are correct
 ├── smoke_test_cli.gd         # Tests that modules can be loaded
 ├── scene_generator_test.gd   # Tests scene generation capabilities
+├── game_functionality_test.gd # Tests game functionality (WIP)
 ├── run_all_tests.gd          # Runs all tests (Godot script)
 └── run_all_tests.sh          # Runs all tests (shell script)
 ```
@@ -50,6 +51,19 @@ Verifies that all module scripts can be loaded without errors.
 
 ### Scene Generator Test
 Tests that the engine can create all the node types needed for scene generation.
+
+### Game Functionality Test
+Tests actual game functionality including enemy spawning and player movement.
+
+## Recent Bug Fixes
+
+### Enemy Spawning Issue
+Enemies were not spawning due to the EnemyTimer timeout signal not being connected.
+**Fix**: Added `enemy_timer.connect("timeout", _on_EnemyTimer_timeout)` in the main script.
+
+### Player Movement Issue
+Player could not move backward from the center of the screen due to scene structure.
+**Fix**: Simplified player scene to remove unnecessary root Node2D.
 
 ## Note on Errors
 

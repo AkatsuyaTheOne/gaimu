@@ -9,6 +9,8 @@ var player = null
 func _ready():
 	# Try to find the player in the scene
 	player = get_tree().get_root().find_child("Player")
+	# Add to enemies group
+	add_to_group("enemies")
 
 func _process(delta):
 	if player != null:

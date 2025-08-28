@@ -9,6 +9,7 @@ var enemy_scene = preload("res://enemy/enemy.tscn")
 @onready var game_over_label = $GameOverLabel
 @onready var restart_button = $RestartButton
 @onready var enemy_timer = $EnemyTimer
+@onready var player = $Player
 
 func _ready():
 	# Start the game
@@ -17,6 +18,10 @@ func _ready():
 	enemy_timer.start()
 	# Connect restart button signal
 	restart_button.connect("pressed", _on_RestartButton_pressed)
+	# Connect enemy timer signal
+	enemy_timer.connect("timeout", _on_EnemyTimer_timeout)
+	# Connect player area entered signal
+	player.connect("area_entered", _on_Player_area_entered)
 
 func _process(delta):
 	if not game_over:

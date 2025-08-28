@@ -1,4 +1,4 @@
-*/.godot/
+*/.godot/*
 *.gd.uid
 *.tscn.uid
 *.import

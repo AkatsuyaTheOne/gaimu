@@ -8,6 +8,8 @@ var screen_size: Vector2
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	# Add to players group (if needed)
+	add_to_group("player")
 
 func _process(delta):
 	var velocity := Vector2.ZERO
