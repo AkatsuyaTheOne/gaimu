@@ -65,6 +65,14 @@ Enemies were not spawning due to the EnemyTimer timeout signal not being connect
 Player could not move backward from the center of the screen due to scene structure.
 **Fix**: Simplified player scene to remove unnecessary root Node2D.
 
+### Enemy Movement Issue
+Enemies were not moving from their spawn positions due to missing collision shapes.
+**Fix**: Added proper collision shapes to enemy scenes and configured collision layers.
+
+### Collision Detection Issue
+Player and enemies were not detecting collisions.
+**Fix**: Corrected collision layer configuration and ensured proper signal connections.
+
 ## Note on Errors
 
 When running these tests headless, you will see errors related to missing assets and resources. This is normal and expected behavior because:

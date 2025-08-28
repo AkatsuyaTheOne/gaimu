@@ -84,6 +84,20 @@ enemy_timer.connect("timeout", _on_EnemyTimer_timeout)
 - Made the Player Area2D the root node of the scene
 - Ensured the movement script applies directly to the root node
 
+### Enemy Movement Issue
+**Problem**: Enemies were not moving from their spawn positions.
+**Fix**: Added proper collision shapes to enemy scenes and ensured correct collision layer setup:
+- Added CircleShape2D collision shape to enemy scenes
+- Set appropriate collision layers and masks for both player and enemies
+
+### Collision Detection Issue
+**Problem**: Player and enemies were not detecting collisions, so game over wasn't triggering.
+**Fix**: Corrected collision layer configuration:
+- Player: Layer 1, Mask 3 (detects self and enemies)
+- Enemy: Layer 2, Mask 1 (detects player)
+- Added proper signal connections in main script
+- Ensured both player and enemies are added to appropriate groups
+
 ## Best Practices
 
 1. Always run tests before committing changes
@@ -93,3 +107,4 @@ enemy_timer.connect("timeout", _on_EnemyTimer_timeout)
 5. Follow the modular design patterns established
 6. Test game functionality after making changes to scene structure
 7. Ensure proper signal connections for interactive elements
+8. Verify collision layer and mask configurations for physics interactions
