@@ -1,24 +1,55 @@
 # Testing the Project
 
-## Organization Tests
+## Test Organization
 
-The project structure has been organized into a clean domain-driven directory structure. You can verify the organization is correct by running:
-
-```
-godot --headless -s core/organization_test.gd
-```
-
-This test verifies that all scene and script files can be found at their expected paths.
-
-## Module Tests
-
-You can also test that the modular architecture is working correctly by running:
+All tests are now organized in the `tests/` directory for better maintainability:
 
 ```
-godot --headless -s core/smoke_test_cli.gd
+tests/
+├── organization_test.gd      # Verifies file paths are correct
+├── smoke_test_cli.gd         # Tests that modules can be loaded
+├── scene_generator_test.gd   # Tests scene generation capabilities
+├── run_all_tests.gd          # Runs all tests (Godot script)
+└── run_all_tests.sh          # Runs all tests (shell script)
 ```
 
-This test verifies that all module scripts can be loaded.
+## Running Individual Tests
+
+You can run individual tests using the Godot command line:
+
+```
+# Test file organization
+godot --headless -s tests/organization_test.gd
+
+# Test module loading
+godot --headless -s tests/smoke_test_cli.gd
+
+# Test scene generation
+godot --headless -s tests/scene_generator_test.gd
+```
+
+## Running All Tests
+
+You can run all tests at once using either:
+
+```
+# Using shell script (Linux/Mac)
+./tests/run_all_tests.sh
+
+# Using Godot script
+godot --headless -s tests/run_all_tests.gd
+```
+
+## Test Descriptions
+
+### Organization Test
+Verifies that all scene and script files can be found at their expected paths.
+
+### Module Smoke Test
+Verifies that all module scripts can be loaded without errors.
+
+### Scene Generator Test
+Tests that the engine can create all the node types needed for scene generation.
 
 ## Note on Errors
 

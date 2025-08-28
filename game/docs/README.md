@@ -43,6 +43,7 @@ game/
 ├── docs/                  # Documentation files
 ├── enemy/                 # Enemy system
 ├── player/                # Player system
+├── tests/                 # Automated tests
 ├── ui/                    # UI system
 └── .godot/                # Godot engine files (generated)
 ```
@@ -57,10 +58,12 @@ The game uses a modular architecture that makes it easy to expand with new featu
 
 ## Testing
 
-The project includes automated tests to verify the organization and modular architecture:
+The project includes automated tests in the `tests/` directory:
 
-- `core/organization_test.gd`: Verifies file paths are correct
-- `core/smoke_test_cli.gd`: Tests that modules can be loaded
+- `tests/organization_test.gd`: Verifies file paths are correct
+- `tests/smoke_test_cli.gd`: Tests that modules can be loaded
+- `tests/scene_generator_test.gd`: Tests scene generation capabilities
+- `tests/run_all_tests.sh`: Runs all tests
 
 For more information about testing, see [TESTING.md](TESTING.md).
 
