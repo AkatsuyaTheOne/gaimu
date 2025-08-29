@@ -1,0 +1,50 @@
+# Xistra - English translation
+
+# UI elements
+UI_HEALTH="Health"
+UI_WEAPON="Weapon"
+UI_INVENTORY="Inventory"
+
+# Weapons
+WEAPON_SACHO="Sacho"
+WEAPON_FOuce="Fouce"
+WEAPON_ANCORA="Áncora"
+
+# Artifacts
+ARTIFACT_FIGA="Figa"
+ARTIFACT_TOXO="Toxo"
+ARTIFACT_ONDA="Onda"
+
+# Enemies
+ENEMY_VECINO="O veciño"
+ENEMY_MORTO="O morto da costa"
+ENEMY_SEREA="Serea"
+ENEMY_LOBISOME="O lobisome"
+ENEMY_MOURA="A moura"
+ENEMY_KRAKEN="Kraken"
+ENEMY_GERION="Gerion"
+ENEMY_ROMAN="Roman"
+ENEMY_CELTA="Celta"
+ENEMY_TRASNO="Trasno"
+ENEMY_OBISPO="Obispo"
+ENEMY_SANTIAGO="Santiago Apostol"
+ENEMY_MARUXAINA="Maruxaina"
+ENEMY_MEIGA="Meiga"
+ENEMY_SERPE="Serpe alada"
+ENEMY_SANTA_COMPAÑA="Santa Compaña"
+
+# Areas
+AREA_START="O Inicio"
+AREA_COAST="A Costa"
+AREA_COUREL="O Courel"
+AREA_LUGO="Lugo"
+AREA_TUI="Tui"
+AREA_SANTIAGO="Santiago"
+AREA_OURENSE="Ourense"
+AREA_VIGO="Vigo"
+AREA_MIÑO="Miño e Sil"
+
+# Story
+STORY_INTRO="You are Xacinta, a woman in her fifties with a farmer's spirit. Explore the mystical lands of Galicia, discover ancient artifacts, and uncover the secrets of your heritage."
+STORY_VECINO="You've disturbed the land of a neighbor. He won't let you pass without a fight!"
+STORY_MORTO="A ghostly pirate haunts this coast. He guards a powerful weapon."

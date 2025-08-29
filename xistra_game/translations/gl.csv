@@ -1,0 +1,50 @@
+# Xistra - Galician translation
+
+# UI elements
+UI_HEALTH="Saúde"
+UI_WEAPON="Arma"
+UI_INVENTORY="Inventario"
+
+# Weapons
+WEAPON_SACHO="Sacho"
+WEAPON_FOuce="Fouce"
+WEAPON_ANCORA="Áncora"
+
+# Artifacts
+ARTIFACT_FIGA="Figa"
+ARTIFACT_TOXO="Toxo"
+ARTIFACT_ONDA="Onda"
+
+# Enemies
+ENEMY_VECINO="O veciño"
+ENEMY_MORTO="O morto da costa"
+ENEMY_SEREA="Serea"
+ENEMY_LOBISOME="O lobisome"
+ENEMY_MOURA="A moura"
+ENEMY_KRAKEN="Kraken"
+ENEMY_GERION="Xerión"
+ENEMY_ROMAN="Romano"
+ENEMY_CELTA="Celta"
+ENEMY_TRASNO="Trasno"
+ENEMY_OBISPO="Obispo"
+ENEMY_SANTIAGO="Santiago Apóstol"
+ENEMY_MARUXAINA="Maruxaina"
+ENEMY_MEIGA="Meiga"
+ENEMY_SERPE="Serpe alada"
+ENEMY_SANTA_COMPAÑA="Santa Compaña"
+
+# Areas
+AREA_START="O Inicio"
+AREA_COAST="A Costa"
+AREA_COUREL="O Courel"
+AREA_LUGO="Lugo"
+AREA_TUI="Tui"
+AREA_SANTIAGO="Santiago"
+AREA_OURENSE="Ourense"
+AREA_VIGO="Vigo"
+AREA_MIÑO="Miño e Sil"
+
+# Story
+STORY_INTRO="Eres Xacinta, unha muller de cincuenta anos cun espírito de labregueira. Explora as terras místicas de Galicia, descobre artefactos antigos e desvela os segredos do teu linaxe."
+STORY_VECINO="Perturbaches a terra dun veciño. ¡Non che deixará pasar sen loitar!"
+STORY_MORTO="Un pirata pantasma asola esta costa. Garda unha arma poderosa."
