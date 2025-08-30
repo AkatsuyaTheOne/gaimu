@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqivm4stfglww"]
+
+[ext_resource type="PackedScene" uid="uid://dcwuobit6frk8" path="res://maps/map_player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://2cgniyi2n31t" path="res://maps/map_enemy.tscn" id="2"]
+[ext_resource type="Script" uid="uid://c0grokp8bculu" path="res://maps/metroidvania_map.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ch8lrjov5cein" path="res://maps/map_ui.tscn" id="4"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("3")
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(100, 300)
+
+[node name="MapUI" parent="." instance=ExtResource("4")]

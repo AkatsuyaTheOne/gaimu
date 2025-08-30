@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="#28283c"/>
+  
+  <!-- Hoe handle -->
+  <path d="M120,180 L115,120 L125,60 L135,65 L125,125 L130,185 Z" fill="#c8b464"/>
+  
+  <!-- Hoe head -->
+  <path d="M125,60 L135,65 L160,40 L150,35 Z" fill="#dcc878"/>
+  
+  <!-- Decorative dot -->
+  <circle cx="140" cy="50" r="3" fill="#78643c"/>
+  
+  <!-- Galician flag stripes -->
+  <rect x="40" y="200" width="176" height="5" fill="#ffffff"/>
+  <rect x="40" y="205" width="176" height="5" fill="#0064c8"/>
+  <rect x="40" y="210" width="176" height="5" fill="#ffffff"/>
+  <rect x="40" y="215" width="176" height="5" fill="#0064c8"/>
+  <rect x="40" y="220" width="176" height="5" fill="#ffffff"/>
+  <rect x="40" y="225" width="176" height="5" fill="#0064c8"/>
+  <rect x="40" y="230" width="176" height="5" fill="#ffffff"/>
+  <rect x="40" y="235" width="176" height="5" fill="#0064c8"/>
+  
+  <!-- Letter X for Xistra -->
+  <text x="20" y="40" font-family="Arial" font-size="32" fill="#ffffff" font-weight="bold">X</text>
+</svg>
