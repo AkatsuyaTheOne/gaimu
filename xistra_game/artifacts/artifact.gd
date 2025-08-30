@@ -5,7 +5,7 @@ extends Area2D
 class_name Artifact
 
 # Artifact properties
-var name = "Artifact"
+var artifact_name = "Artifact"
 var description = ""
 var effect = ""
 var collected = false
@@ -18,5 +18,5 @@ func _on_body_entered(body):
 
 func collect():
 	# Handle artifact collection
-	get_parent().get_node("GameManager").collect_artifact(name)
+	get_parent().get_node("GameManager").collect_artifact(artifact_name)
 	queue_free()

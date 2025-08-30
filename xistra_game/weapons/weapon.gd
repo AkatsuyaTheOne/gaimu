@@ -5,7 +5,7 @@ extends Node2D
 class_name Weapon
 
 # Weapon properties
-var name = "Weapon"
+var weapon_name = "Weapon"
 var damage = 10
 var speed = 1.0
 var cooldown = 0.5
@@ -15,7 +15,7 @@ var description = ""
 var artifacts = []
 
 func _init(weapon_name, weapon_damage, weapon_speed, weapon_cooldown, weapon_description):
-	name = weapon_name
+	self.weapon_name = weapon_name
 	damage = weapon_damage
 	speed = weapon_speed
 	cooldown = weapon_cooldown
@@ -34,16 +34,16 @@ func enhance_with_artifact(artifact_name):
 			damage += 5
 		"figa_2":
 			# Special enhancement for Sacho
-			if name == "Sacho":
+			if weapon_name == "Sacho":
 				# Add ability to throw worms
 				pass
 		"toxo_1":
 			# Special enhancement for Fouce
-			if name == "Fouce":
+			if weapon_name == "Fouce":
 				# Add ability to imprison enemies
 				pass
 		"onda_1":
 			# Special enhancement for Áncora
-			if name == "Áncora":
+			if weapon_name == "Áncora":
 				# Add ability to unleash sea wave
 				pass

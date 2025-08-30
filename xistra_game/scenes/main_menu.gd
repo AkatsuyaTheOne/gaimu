@@ -6,6 +6,7 @@ func _ready():
 	# Connect buttons
 	$VBoxContainer/NewGameButton.pressed.connect(_on_new_game_pressed)
 	$VBoxContainer/LoadGameButton.pressed.connect(_on_load_game_pressed)
+	$VBoxContainer/MapDemoButton.pressed.connect(_on_map_demo_pressed)
 	$VBoxContainer/QuitButton.pressed.connect(_on_quit_pressed)
 
 func _on_new_game_pressed():
@@ -20,6 +21,10 @@ func _on_load_game_pressed():
 	else:
 		# Show error message
 		$VBoxContainer/ErrorMessage.show()
+
+func _on_map_demo_pressed():
+	# Launch map demo
+	get_tree().change_scene_to_file("res://maps/metroidvania_map.tscn")
 
 func _on_quit_pressed():
 	# Quit the game
