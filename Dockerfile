@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
+ARG GODOT_VERSION=4.4.1
+
 WORKDIR /workspace
 
 RUN apt-get update && apt-get install -y \
@@ -42,10 +44,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Download and install Godot
-RUN wget https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_linux.x86_64.zip \
-    && unzip Godot_v4.2.1-stable_linux.x86_64.zip \
-    && mv Godot_v4.2.1-stable_linux.x86_64 /usr/local/bin/godot \
-    && rm Godot_v4.2.1-stable_linux.x86_64.zip
+RUN wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip \
+    && unzip Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip \
+    && mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot \
+    && rm Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip
 
 # Install Qwen-Code globally
 RUN npm install -g @qwen-code/qwen-code
