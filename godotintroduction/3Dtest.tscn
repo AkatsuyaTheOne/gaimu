@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://iwemonspft36"]
+
+[ext_resource type="Material" uid="uid://dlsh3htbnhij5" path="res://materiales/material1.tres" id="1_nu766"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_teahj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_teahj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="muñeco nieve" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101711, -0.50762)
+
+[node name="brazos" type="MeshInstance3D" parent="muñeco nieve"]
+transform = Transform3D(2.33926, 0.00340268, 0.00375921, -0.0449163, 0.173877, -0.00375989, 0.0457785, -0.00327388, -0.195783, -0.386953, 1.37758, 1.52183)
+material_override = ExtResource("1_nu766")
+mesh = SubResource("BoxMesh_teahj")
+skeleton = NodePath("../..")
+
+[node name="torso" type="MeshInstance3D" parent="muñeco nieve"]
+transform = Transform3D(1.59099, 0, 0, 0, 1.59099, 0, 0, 0, 1.59099, -0.403067, 1.00789, 1.57572)
+material_override = ExtResource("1_nu766")
+mesh = SubResource("SphereMesh_teahj")
+skeleton = NodePath("../..")
+
+[node name="cabeza" type="MeshInstance3D" parent="muñeco nieve"]
+transform = Transform3D(0.991751, 0, 0, 0, 0.991751, 0, 0, 0, 0.991751, -0.403067, 2.06543, 1.57572)
+material_override = ExtResource("1_nu766")
+mesh = SubResource("SphereMesh_teahj")
+skeleton = NodePath("../..")
+
+[node name="base" type="MeshInstance3D" parent="muñeco nieve"]
+transform = Transform3D(2.17205, 0, 0, 0, 2.17205, 0, 0, 0, 2.17205, -0.403067, 0.117861, 1.57572)
+mesh = SubResource("SphereMesh_teahj")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("1_nu766")
