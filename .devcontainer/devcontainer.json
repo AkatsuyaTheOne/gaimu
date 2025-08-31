@@ -12,7 +12,8 @@
                 "ms-python.python",
                 "ms-python.vscode-pylance",
                 "geequlim.godot-tools",
-                "neikeq.godot-csharp-vscode"
+                "neikeq.godot-csharp-vscode",
+                "ms-azuretools.vscode-containers"
             ],
             "settings": {
                 "godot_tools.editor_path": "/usr/local/bin/godot",

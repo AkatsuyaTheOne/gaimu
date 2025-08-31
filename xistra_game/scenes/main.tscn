@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy03javil8brd"]
+
+[ext_resource type="PackedScene" uid="uid://qe071kfyutup" path="res://characters/xacinta.tscn" id="1"]
+[ext_resource type="Script" uid="uid://iyalpxsnguxl" path="res://scripts/game_manager.gd" id="2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("2")
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(100, 100)

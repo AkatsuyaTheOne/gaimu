@@ -1,0 +1,7 @@
+*/.godot/*
+*.gd.uid
+*.tscn.uid
+*.import
+export_presets.cfg
+*.kra~
+*.png~

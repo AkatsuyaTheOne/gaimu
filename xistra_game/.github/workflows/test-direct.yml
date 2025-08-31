@@ -1,0 +1,45 @@
+name: Test Xistra Game
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip \
+          libx1-6 libxcursor1 libxinerama1 libgl1 libglu1-mesa \
+          libxrandr2 libasound2t64 libpulse0 libfreetype6 libssl3 \
+          libxkbcommon0 libxkbcommon-x11-0 libxi6 libxrender1 \
+          libxss1 libxt6 libxtst6 libgl1-mesa-dri libegl1 \
+          libegl-mesa0 libgles2 libgtk-3-0 libasound2-dev
+
+    - name: Install Godot
+      run: |
+        GODOT_VERSION=4.4.1
+        wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip
+        unzip Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip
+        sudo mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot
+        sudo chmod +x /usr/local/bin/godot
+
+    - name: Run syntax check
+      run: |
+        cd xistra_game/tests
+        chmod +x syntax_check.sh
+        ./syntax_check.sh
+
+    - name: Run all tests
+      run: |
+        cd xistra_game/tests
+        chmod +x run_all_tests.sh
+        ./run_all_tests.sh

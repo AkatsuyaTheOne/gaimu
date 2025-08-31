@@ -1,0 +1,8 @@
+extends "res://artifacts/artifact.gd"
+
+# Figa - Traditional Galician amulet
+
+func _ready():
+	name = "figa_1"
+	description = "A traditional Galician amulet in the shape of a figa (fist)."
+	effect = "Increases health."
