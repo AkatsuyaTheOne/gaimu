@@ -20,8 +20,8 @@ jobs:
 
     - name: Run syntax check
       run: |
-        docker run --rm xistra-game bash -c "cd ${github.workspace}/xistra_game/tests && chmod +x syntax_check.sh && ./syntax_check.sh"
+        docker run --rm xistra-game bash -c "cd xistra_game/tests && chmod +x syntax_check.sh && ./syntax_check.sh"
 
     - name: Run all tests
       run: |
-        docker run --rm xistra-game bash -c "cd ${github.workspace}/xistra_game/tests && chmod +x run_all_tests.sh && ./run_all_tests.sh"
+        docker run --rm xistra-game bash -c "cd xistra_game/tests && chmod +x run_all_tests.sh && ./run_all_tests.sh"
