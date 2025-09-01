@@ -1,0 +1,31 @@
+name: Test Xistra Game
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build Docker image
+      run: docker build -t xistra-game -f Dockerfile .
+
+    - name: Start container
+      run: docker run -d --name xistra-game xistra-game sleep infinity
+
+    - name: Run syntax check
+      run: docker exec xistra-game bash -c "ls -la"
+
+    - name: Run syntax check
+      run: docker exec xistra-game bash -c "cd xistra_game/tests && chmod +x syntax_check.sh && ./syntax_check.sh"
+
+    - name: Run all tests
+      run: |
+        docker exec xistra-game bash -c "cd xistra_game/tests && chmod +x run_all_tests.sh && ./run_all_tests.sh"

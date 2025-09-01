@@ -1,5 +1,25 @@
 # Godot Game Project Development Notes
 
+## Godot Version
+
+We are using Godot 4.4 for this project.
+
+## Metroidvania Movement System
+
+The player movement has been fixed to implement proper Metroidvania-style platforming:
+- Left/right movement with physics-based movement
+- Gravity affects the player when not on floor
+- Jumping with variable height based on input timing
+- Proper collision detection with platforms
+
+### Required Input Actions
+
+The game requires these input actions to be defined in the project settings:
+- `move_left` - Move player left (typically A or Left Arrow)
+- `move_right` - Move player right (typically D or Right Arrow)
+- `jump` - Make player jump (typically Space or W/Up Arrow)
+- `attack` - Perform weapon attack (typically J or Enter)
+
 ## Project Structure
 
 The game project has been reorganized into a subject-based directory structure:
