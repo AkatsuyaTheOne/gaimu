@@ -16,7 +16,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t xistra-game -f ../Dockerfile ..
+        docker build -t xistra-game -f Dockerfile .
 
     - name: Run syntax check
       run: |
