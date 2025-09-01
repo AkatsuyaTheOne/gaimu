@@ -21,6 +21,9 @@ jobs:
       run: docker run -d --name xistra-game xistra-game sleep infinity
 
     - name: Run syntax check
+      run: docker exec xistra-game bash -c "ls -la"
+
+    - name: Run syntax check
       run: docker exec xistra-game bash -c "cd xistra_game/tests && chmod +x syntax_check.sh && ./syntax_check.sh"
 
     - name: Run all tests
