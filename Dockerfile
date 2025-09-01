@@ -4,40 +4,25 @@ ARG GODOT_VERSION=4.4.1
 
 WORKDIR /workspace
 
+# Install only necessary packages for Godot and the game
 RUN apt-get update && apt-get install -y \
     curl \
     git \
     python3 \
     python3-pip \
     sudo \
+    wget \
+    unzip \
+    # Essential graphics libraries for Godot
     libx11-6 \
     libxcursor1 \
     libxinerama1 \
     libgl1 \
     libglu1-mesa \
     libxrandr2 \
+    # Essential audio libraries
     libasound2t64 \
     libpulse0 \
-    libfreetype6 \
-    libssl3 \
-    wget \
-    unzip \
-    libxkbcommon0 \
-    libxkbcommon-x11-0 \
-    libxi6 \
-    libxrender1 \
-    libxss1 \
-    libxt6 \
-    libxtst6 \
-    libgl1-mesa-dri \
-    libegl1 \
-    libegl-mesa0 \
-    libgles2 \
-    libgtk-3-0 \
-    libasound2-dev \
-    alsa-base \
-    alsa-utils \
-    pulseaudio \
     # Node.js 20 setup
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
